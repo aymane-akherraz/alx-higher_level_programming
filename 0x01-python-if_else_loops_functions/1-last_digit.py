@@ -7,10 +7,10 @@ if number < 0:
     last_dg = -(number % 10)
 else:
     last_dg = number % 10
-print(f"{last_dg:d} ", end="")
+print(f"{last_dg:d} and is ", end="")
 if last_dg > 5:
-    print("and is greater than 5")
+    print("greater than 5")
 elif last_dg == 0:
-    print("and is 0")
+    print("0")
 else:
-    print("and is less than 6 and not 0")
+    print("less than 6 and not 0")

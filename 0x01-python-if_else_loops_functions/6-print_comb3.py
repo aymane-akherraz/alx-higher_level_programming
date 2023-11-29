@@ -2,6 +2,6 @@
 for i in range(100):
     if i % 10 > i / 10:
         if (i < 89):
-            print(f"{i:02d},", end=" ")
+            print("{:02}".format(i), end=", ")
         else:
-            print(f"{i:02d}")
+            print("{}".format(i))

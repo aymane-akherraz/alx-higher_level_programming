@@ -5,7 +5,6 @@ def uppercase(str):
         if i == length:
             ec = "\n"
         if 97 <= ord(c) <= 122:
-            print(chr(ord(c) - 32), end=ec)
-        else:
-            print(c, end=ec)
+            c = chr(ord(c) - 32)
+        print("{}".format(c), end=ec)
         i += 1
