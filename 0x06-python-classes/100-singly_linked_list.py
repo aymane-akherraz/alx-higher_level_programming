@@ -52,6 +52,7 @@ class Node:
 
 
 class SinglyLinkedList:
+    """Define a SinglyLinkedList"""
 
     def __init__(self):
         """
