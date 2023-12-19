@@ -97,9 +97,8 @@ class Square:
         """Prints in stdout the square with the character #"""
         r = ""
         s = self.__size
-        if s == 0:
-            r += "\n"
-        else:
+
+        if s != 0:
             for e in range(self.__position[1]):
                 r += "\n"
             for i in range(s):
