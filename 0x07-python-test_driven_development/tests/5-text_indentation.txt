@@ -1,0 +1,112 @@
+The ``5-text_indentation.py`` module
+============================
+Using ``text_indentation``
+---------------------
+
+import ``text_indentation`` from the ``5-text_indentation.py`` module:
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test with a text:
+	
+	>>> text_indentation("Hello! How are you?I'm fine, thanks! Any job to do today?Yes, of course!")
+	Hello! How are you?
+	<BLANKLINE>
+	I'm fine, thanks! Any job to do today?
+	<BLANKLINE>
+	Yes, of course!
+
+	>>> text_indentation("H.e?ll:o       !")
+	H.
+	<BLANKLINE>
+	e?
+	<BLANKLINE>
+	ll:
+	<BLANKLINE>
+	o       !
+
+	>>> text_indentation("      ")
+	<BLANKLINE>
+
+	>>> text_indentation(".   ?   :")
+	.
+	<BLANKLINE>
+	   ?
+	<BLANKLINE>
+	   :
+	<BLANKLINE>
+
+	>>> text_indentation("")
+
+	>>> text_indentation("How ???Here:    ok...     ")
+	How ?
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	Here:
+	<BLANKLINE>
+	    ok.
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+	<BLANKLINE>
+
+	>>> text_indentation("?::....")
+	?
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+
+	>>> text_indentation(".How?")
+	.
+	<BLANKLINE>
+	How?
+	<BLANKLINE>
+
+	>>> text_indentation(".\n:\n\n?")
+	.
+	<BLANKLINE>
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	<BLANKLINE>
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+
+Test with different type of args:
+
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation([])
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation(33)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation(100.40)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+Test with no arguments:
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
