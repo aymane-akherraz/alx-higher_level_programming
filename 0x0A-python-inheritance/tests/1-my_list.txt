@@ -8,6 +8,22 @@ import ``MyList`` from the ``1-my_list`` module:
 
 	>>> MyList = __import__('1-my_list').MyList
 
+Test if correct type:
+
+	>>> my_list = MyList()
+	>>> type(my_list) == MyList
+	True
+
+Test isinstance:
+
+	>>> isinstance(my_list, MyList)
+	True
+
+Test if print_sorted is an instance method:
+
+	>>> type(MyList.__dict__['print_sorted'])
+	<class 'function'>
+
 Test if MyList inherits from list:
 
 	>>> print(issubclass(MyList, list))

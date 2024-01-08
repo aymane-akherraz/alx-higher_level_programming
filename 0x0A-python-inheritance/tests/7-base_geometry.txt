@@ -11,6 +11,27 @@ Creating an object of type BaseGeometry:
 
 	>>> bg = BaseGeometry()
 
+Test if correct type:
+
+	>>> type(bg) == BaseGeometry
+	True
+
+Test isinstance:
+
+	>>> isinstance(bg, BaseGeometry)
+	True
+
+Test if integer_validator is an instance method:
+
+	>>> type(BaseGeometry.__dict__['integer_validator'])
+	<class 'function'>
+
+
+Test if area is an instance method:
+
+	>>> type(BaseGeometry.__dict__['area'])
+	<class 'function'>
+
 Test area():
 
 	>>> bg.area()
