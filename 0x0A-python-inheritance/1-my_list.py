@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-"""MyList module"""
+""" Define a class named MyList """
 
 
 class MyList(list):
-    """MyList class - Inherits from list"""
+    """ Define a class named MyList that inherits from list """
+
     def print_sorted(self):
-        """Prints a sorted list"""
+        """ Prints the list, but sorted (ascending sort) """
+
         print(sorted(self))
