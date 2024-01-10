@@ -26,14 +26,14 @@ Test with a text:
 	o       !
 
 	>>> text_indentation("      ")
-	<BLANKLINE>
+	
 
 	>>> text_indentation(".   ?   :")
 	.
 	<BLANKLINE>
-	   ?
+	?
 	<BLANKLINE>
-	   :
+	:
 	<BLANKLINE>
 
 	>>> text_indentation("")
@@ -47,12 +47,11 @@ Test with a text:
 	<BLANKLINE>
 	Here:
 	<BLANKLINE>
-	    ok.
+	ok.
 	<BLANKLINE>
 	.
 	<BLANKLINE>
 	.
-	<BLANKLINE>
 	<BLANKLINE>
 
 	>>> text_indentation("?::....")
@@ -80,10 +79,7 @@ Test with a text:
 	>>> text_indentation(".\n:\n\n?")
 	.
 	<BLANKLINE>
-	<BLANKLINE>
 	:
-	<BLANKLINE>
-	<BLANKLINE>
 	<BLANKLINE>
 	?
 	<BLANKLINE>
