@@ -12,11 +12,12 @@ def append_after(filename="", search_string="", new_string=""):
         new_string: a string representing the new line to be inserted
     """
     with open(filename, 'r+', encoding="utf-8") as f:
-        lines = f.readlines()
+        updated_f = ""
 
-        for i in range(len(lines)):
-            if search_string in lines[i]:
-                lines.insert(i + 1, new_string)
+        for line in f:
+            updated_f += line
+            if search_string in line:
+                updated_f += new_string
 
         f.seek(0)
-        f.writelines(lines)
+        f.write(updated_f)
