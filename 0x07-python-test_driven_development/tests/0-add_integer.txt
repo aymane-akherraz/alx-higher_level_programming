@@ -41,7 +41,7 @@ Test with None as arg:
 
 Overflow test:
 
-	>>> add_integer(float('inf'), -float('inf'))
+	>>> add_integer(float('inf'), 0)
 	Traceback (most recent call last):
 	OverflowError: cannot convert float infinity to integer
 
