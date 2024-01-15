@@ -30,7 +30,7 @@ class Base:
         list_dictionaries: a list of dictionaries
         """
 
-        if list_dictionaries is None or len(list_dictionaries) == 0:
+        if not list_dictionaries:
             return "[]"
 
         return json.dumps(list_dictionaries)
@@ -44,8 +44,9 @@ class Base:
         """
 
         filename = "{}.json".format(cls.__name__)
+        my_list = []
+
         if list_objs is not None:
-            my_list = []
             for i in range(len(list_objs)):
                 my_list.append(list_objs[i].to_dictionary())
 

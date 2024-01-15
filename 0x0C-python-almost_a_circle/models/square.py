@@ -47,10 +47,9 @@ class Square(Rectangle):
             kwargs: A key-worded argument
         """
 
-        ln = len(args)
-        if args is not None and ln != 0:
+        if args is not None and len(args) != 0:
             my_list = ['id', 'size', 'x', 'y']
-            for i in range(ln):
+            for i in range(len(args)):
                 if my_list[i] == "size":
                     setattr(self, "width", args[i])
                     setattr(self, "haight", args[i])
