@@ -31,7 +31,7 @@ class Base:
         Args:
             list_dictionaries (list): A list of dictionaries.
         """
-        if list_dictionaries is None or not list_dictionaries:
+        if list_dictionaries is None or list_dictionaries == []:
             return "[]"
 
         return json.dumps(list_dictionaries)
@@ -74,15 +74,10 @@ class Base:
         Args:
             dictionary: a double pointer to a dictionary
         """
-        if dictionary:
-            new = None
-            if cls.__name__ == "Rectangle":
-                    new = cls(2, 3)
-            else:
-                    new = cls(2)
 
-            new.update(**dictionary)
-            return new
+        new = cls(2, 3)
+        new.update(**dictionary)
+        return new
 
     @classmethod
     def load_from_file(cls):
