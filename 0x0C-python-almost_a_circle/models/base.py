@@ -31,10 +31,11 @@ class Base:
         Args:
             list_dictionaries (list): A list of dictionaries.
         """
-        if list_dictionaries is None or list_dictionaries == []:
-            return "[]"
+        my_str = "[]"
+        if list_dictionaries is not None and list_dictionaries:
+            my_str = list_dictionaries
 
-        return json.dumps(list_dictionaries)
+        return json.dumps(my_str)
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -74,8 +75,11 @@ class Base:
         Args:
             dictionary: a double pointer to a dictionary
         """
+        if cls.__name__ == "Rectangle":
+            new = cls(2, 3)
+        else:
+            new = cls(2)
 
-        new = cls(2, 3)
         new.update(**dictionary)
         return new
 
