@@ -26,11 +26,11 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """ Returns the JSON string representation of list_dictionaries
-        Args:
-            list_dictionaries: a list of dictionaries
-        """
+        """Return the JSON serialization of a list of dicts
 
+        Args:
+            list_dictionaries (list): A list of dictionaries.
+        """
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
 
@@ -74,9 +74,14 @@ class Base:
         Args:
             dictionary: a double pointer to a dictionary
         """
-        new = cls(2, 3)
-        new.update(**dictionary)
-        return new
+        if dictionary:
+            if cls.__name__ == "Rectangle":
+                    new = cls(2, 3)
+            else:
+                    new = cls(2)
+
+            new.update(**dictionary)
+            return new
 
     @classmethod
     def load_from_file(cls):
