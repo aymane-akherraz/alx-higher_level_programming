@@ -31,11 +31,10 @@ class Base:
         Args:
             list_dictionaries (list): A list of dictionaries.
         """
-        my_str = "[]"
-        if list_dictionaries is not None and list_dictionaries:
-            my_str = list_dictionaries
-
-        return json.dumps(my_str)
+        if list_dictionaries is None or not list_dictionaries:
+            return "[]"
+        else:
+            return dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
