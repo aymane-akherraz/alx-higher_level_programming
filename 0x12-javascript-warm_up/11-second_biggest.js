@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const { argv } = require('node:process');
 const list = [];
-if (argv.length === 2 || argv.length === 3) {
+if (argv.length <= 3) {
   console.log(0);
 } else {
   argv.forEach((e, i) => {
@@ -18,7 +18,7 @@ if (argv.length === 2 || argv.length === 3) {
     }
     i++;
   }
-  let sm = list[0];
+  let sm = list[0] !== m ? list[0] : list[1];
   i = 1;
   while (i < len) {
     if (list[i] > sm && list[i] !== m) {
