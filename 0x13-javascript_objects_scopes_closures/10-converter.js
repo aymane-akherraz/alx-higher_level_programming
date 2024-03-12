@@ -2,6 +2,9 @@
 
 exports.converter = function (base) {
   return function (nb) {
-    return nb.tostring(base);
+    if (base === 10) {
+      return nb.toString();
+    }
+    return nb.toString(base);
   };
 };
