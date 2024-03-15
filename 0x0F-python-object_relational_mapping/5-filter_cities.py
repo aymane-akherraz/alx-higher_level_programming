@@ -15,12 +15,15 @@ if __name__ == '__main__':
                 ORDER BY cities.id ", [argv[4]])
     rows = cur.fetchall()
     num_rows = cur.rowcount
-    for row in rows:
-        if num_rows > 1:
-            print(row[0], end=", ")
-        else:
-            print(row[0])
-        num_rows -= 1
+    if num_rows == 0:
+        print()
+    else:
+        for row in rows:
+            if num_rows > 1:
+                print(row[0], end=", ")
+            else:
+                print(row[0])
+            num_rows -= 1
 
     cur.close()
     db.close()
