@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Lists all State objects, and corresponding City objects,
+    contained in the database hbtn_0e_101_usa
+"""
 import sys
 from sqlalchemy import (create_engine)
 from relationship_state import Base, State
