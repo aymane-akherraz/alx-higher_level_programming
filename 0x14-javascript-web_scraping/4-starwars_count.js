@@ -9,7 +9,7 @@ request(`${process.argv[2]}`, (err, res, body) => {
   const films = JSON.parse(body);
   let nbMovies = 0;
   films.results.forEach(obj => {
-    if (obj.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
+    if (obj.characters.some(character => character.includes('/18/'))) {
       nbMovies++;
     }
   });
